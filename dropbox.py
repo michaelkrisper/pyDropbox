@@ -13,7 +13,7 @@ import config
 from splinter import Browser
 
 def main():
-    with Browser("phantomjs") as browser:
+    with Browser() as browser:
         browser.visit("https://www.dropbox.com/login")
         browser.find_by_css('.text-input-input').first.type(config.USERNAME)
         browser.find_by_css('.password-input').first.type(config.PASSWORD)
